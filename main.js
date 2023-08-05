@@ -19,12 +19,14 @@ const asciiText = String.raw`
 ascii_banner_element.textContent = asciiText;
 document.getElementById("command-line").addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-        submitText();
+        var cleaned_content = document.getElementById('command-line').value.replace(/\n/g, '');
+        command_controller(cleaned_content);
     }
 });
 
 
 function clearOutputArea() {
+    document.getElementById('command-line').value = '';
     var child = output_area_element.lastElementChild; 
     while (child) {
         output_area_element.removeChild(child);
@@ -33,7 +35,7 @@ function clearOutputArea() {
 }
 
 function submitText() {
-    var text = document.getElementById('command-line').value;
+    var text = document.getElementById('command-line').value.replace(/\n/g, '');
     document.getElementById('command-line').value = '';
 
     var new_element = document.createElement("span");
@@ -52,16 +54,16 @@ function formatOutputText(text) {
     return 'visitor@ashley_zhang:~% ' + text;
 }
 
-
-var btn = document.getElementById(
-    "btn").onclick = function() {
-        clearOutputArea();
+function command_controller(command) {
+    switch (command.toLowerCase()) {
+        case "clear":
+            clearOutputArea();
+            break;
+        default:
+            submitText();
+            break;
+    }
 }
-
-// var btn = document.getElementById(
-//     "btn").onclick = function() {
-//         submitText();
-// }
 
 
 
