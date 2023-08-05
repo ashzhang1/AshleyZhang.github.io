@@ -1,0 +1,26 @@
+* {
+    font-family:monospace
+}
+
+#ascii-banner {
+    white-space: pre-wrap;
+  }
+
+
+#Heading {
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+    margin-bottom: 0.25em;
+}
+
+#Output-area {
+    border-width:0.5px;
+    border-style:solid;
+    border-color:black;
+    margin-bottom: 0.25em;
+}
+
+label {
+    vertical-align: top;  
+}
