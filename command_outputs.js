@@ -11,3 +11,7 @@ export const asciiText = String.raw`
                                             |  $$$$$$/                                              |  $$$$$$/
                                             \______/                                                \______/
 `;
+
+
+export var email = 'ashzhang1.com';
+

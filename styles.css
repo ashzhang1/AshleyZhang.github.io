@@ -24,3 +24,11 @@
 label {
     vertical-align: top;  
 }
+
+body {
+    pointer-events: none;
+}
+
+#text-area {
+    pointer-events: auto;
+}
