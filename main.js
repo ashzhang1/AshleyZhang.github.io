@@ -17,6 +17,11 @@ const asciiText = String.raw`
 
 
 ascii_banner_element.textContent = asciiText;
+document.getElementById("command-line").addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        submitText();
+    }
+});
 
 
 function clearOutputArea() {
@@ -29,9 +34,10 @@ function clearOutputArea() {
 
 function submitText() {
     var text = document.getElementById('command-line').value;
+    document.getElementById('command-line').value = '';
 
     var new_element = document.createElement("span");
-    var text_node = document.createTextNode(text);
+    var text_node = document.createTextNode(formatOutputText(text));
 
     var linebreak = document.createElement("br");
 
@@ -41,15 +47,21 @@ function submitText() {
     output_area_element.append(linebreak);
 }
 
-// var btn = document.getElementById(
-//     "btn").onclick = function() {
-//         clearOutputArea();
-// }
+
+function formatOutputText(text) {
+    return 'visitor@ashley_zhang:~% ' + text;
+}
+
 
 var btn = document.getElementById(
     "btn").onclick = function() {
-        submitText();
+        clearOutputArea();
 }
+
+// var btn = document.getElementById(
+//     "btn").onclick = function() {
+//         submitText();
+// }
 
 
 
