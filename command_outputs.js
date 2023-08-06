@@ -12,4 +12,16 @@ export const asciiText = String.raw`
                                             \______/                                                \______/
 `;
 
-export const help = 'whois          Who is Ashley?\ncontact          Display contact information\neducation          Education summary\nexperience          Professional experience summary';
+export const help = [
+    '<span class="command">whois</span>          Who is Ashley?',
+    '<span class="command">education</span>      View education history',
+    '<span class="command">experience</span>     View professional working experience',
+    '<span class="command">projects</span>       View coding projects',
+    '<span class="command">LinkedIn</span>       View LinkedIn profile',
+    '<span class="command">GitHub</span>         View GitHub profile',
+    '<span class="command">Email</span>          Send email',
+    '<span class="command">help</span>           View available commands',
+    '<span class="command">clear</span>          Clear terminal',
+    "<br>",
+  ];
+
