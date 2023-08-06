@@ -8,16 +8,16 @@
 
 
 #Heading {
-    border-width:2px;
+    /* border-width:2px;
     border-style:solid;
-    border-color:black;
+    border-color:black; */
     margin-bottom: 0.25em;
 }
 
 #Output-area {
-    border-width:0.5px;
+    /* border-width:0.5px;
     border-style:solid;
-    border-color:black;
+    border-color:black; */
     margin-bottom: 0.25em;
 }
 
@@ -31,4 +31,10 @@ body {
 
 #text-area {
     pointer-events: auto;
+}
+
+textarea { 
+    resize: none;
+    border: none;
+    outline: none;
 }

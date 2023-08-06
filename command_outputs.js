@@ -12,6 +12,4 @@ export const asciiText = String.raw`
                                             \______/                                                \______/
 `;
 
-
-export var email = 'ashzhang1.com';
-
+export const help = 'whois          Who is Ashley?\ncontact          Display contact information\neducation          Education summary\nexperience          Professional experience summary';

@@ -45,15 +45,18 @@ function formatOutputText(text) {
 }
 
 function showOutput(output) {
-    var new_element = document.createElement("span");
-    var text_node = document.createTextNode(output);
+    var split_output = output.split("\n");
+    split_output.forEach(function(line) {
+        var new_element = document.createElement("span");
+        var text_node = document.createTextNode(line);
 
-    var linebreak = document.createElement("br");
+        var linebreak = document.createElement("br");
 
-    new_element.appendChild(text_node);
+        new_element.appendChild(text_node);
 
-    output_area_element.appendChild(new_element);
-    output_area_element.append(linebreak);
+        output_area_element.appendChild(new_element);
+        output_area_element.append(linebreak);
+    });
 }
 
 function command_controller(command) {
@@ -64,6 +67,10 @@ function command_controller(command) {
         case "email":
             submitText();
             showOutput(cmd_outputs.email);
+            break;
+        case "help":
+            submitText();
+            showOutput(cmd_outputs.help);
             break;
         default:
             submitText();
