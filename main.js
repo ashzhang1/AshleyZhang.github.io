@@ -23,6 +23,7 @@ function clearOutputArea() {
         output_area_element.removeChild(child);
         child = output_area_element.lastElementChild;
     }
+    output_area_element.innerHTML = '';
 }
 
 function submitText() {
@@ -56,9 +57,9 @@ function command_controller(command) {
         case "clear":
             clearOutputArea();
             break;
-        case "email":
+        case "contact":
             submitText();
-            showOutput(cmd_outputs.email);
+            showOutput(cmd_outputs.contact);
             break;
         case "help":
             submitText();
@@ -67,6 +68,14 @@ function command_controller(command) {
         case "whois":
             submitText();
             showOutput(cmd_outputs.whois);
+            break;
+        case "education":
+            submitText();
+            showOutput(cmd_outputs.education);
+            break;
+        case "experience":
+            submitText();
+            showOutput(cmd_outputs.experience);
             break;
         default:
             submitText();
