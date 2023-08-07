@@ -62,8 +62,8 @@ export const whois = [
 
   export const contact = [
     "<br>",
-    'email          <a href="mailto: ashzhang1@gmail.com">contact me via email</a>',
-    'linkedin       <a href="https://www.linkedin.com/in/ashley-zhang1/">linkedin/ashleyzhang</a>',
+    'email          <a href="' + email + '" target="_blank">contact me via email!' + "</a>",
+    'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/ashleyzhang' + "</a>",
     'github         <a href="' + github + '" target="_blank">github/ashleyzhang' + "</a>",
     "<br>"
   ];

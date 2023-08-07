@@ -1,0 +1,65 @@
+* {
+    font-family:monospace
+}
+
+#ascii-banner {
+    white-space: pre-wrap;
+  }
+
+
+#Heading {
+    font-size: 16px;
+    margin-bottom: 0.25em;
+    color: rgb(189, 224, 252);
+}
+
+label {
+    font-size: 16px;
+    vertical-align: top;
+    color: rgb(186, 111, 47);  
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: rgb( 108, 231, 153);
+}
+
+#Output-area {
+    margin-bottom: 0.25em;
+    font-size: 16px;
+    color: rgb( 108, 231, 153);
+}
+
+#text-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea { 
+    font-size: 16px;
+    line-height: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding-top: 0;
+    background-color: black;
+    color: rgb(189, 224, 252);
+}
+
+
+
+
