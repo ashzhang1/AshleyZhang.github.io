@@ -25,7 +25,6 @@ body {
 
 #text-area {
     pointer-events: auto;
-    overflow:auto;
 }
 
 textarea { 

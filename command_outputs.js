@@ -70,8 +70,8 @@ export const whois = [
 
   export const projects = [
     "<br>",
-    'Music Playlist Generator               A program that utilises the Spotify API to generate a playlist based on artists the user inputs.',
-    'Password Manager                       A password manager that uses asymmetric encryption developed using Python and a PostgreSQL datbase.',
-    'Interactive Terminal Website           A fun, interactive personal website!',
+    'Music Playlist Generator               <a href="https://github.com/ashzhang1/simple-playlist-generator">A program that utilises the Spotify API to generate a playlist based on artists the user inputs.</a>',
+    'Password Manager                       <a href="https://github.com/ashzhang1/password_manager">A password manager that uses asymmetric encryption developed using Python and a PostgreSQL datbase.</a>',
+    'Interactive Terminal Website           <a href="https://github.com/ashzhang1/Terminal_Website">A fun, interactive personal website!</a>',
     "<br>"
   ];
