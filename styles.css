@@ -19,13 +19,14 @@ label {
     vertical-align: top;  
 }
 
-/* body {
+body {
     pointer-events: none;
-} */
+}
 
-/* #text-area {
+#text-area {
     pointer-events: auto;
-} */
+    overflow:auto;
+}
 
 textarea { 
     resize: none;

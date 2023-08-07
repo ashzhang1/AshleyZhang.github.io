@@ -61,9 +61,12 @@ function replaceSpacesOutsideTags(input) {
 function showOutput(output) {
     var new_output = output.map(function(line) {
         return replaceSpacesOutsideTags(line);
-        // return line.replace(/\s/g, '&nbsp;');
     });
     output_area_element.innerHTML += new_output.join('<br>');
+}
+
+function unknownOutput(unknownCommand) {
+    output_area_element.innerHTML += `zsh: command not found: ${unknownCommand}`;
 }
 
 function command_controller(command) {
@@ -97,6 +100,7 @@ function command_controller(command) {
             break;
         default:
             submitText();
+            unknownOutput(command.toLowerCase());
             break;
     }
 }
