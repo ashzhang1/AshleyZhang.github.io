@@ -62,7 +62,16 @@ export const whois = [
 
   export const contact = [
     "<br>",
-    'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/ashleyzhang' + "</a>",
+    'email          <a href="mailto: ashzhang1@gmail.com">contact me via email</a>',
+    'linkedin       <a href="https://www.linkedin.com/in/ashley-zhang1/">linkedin/ashleyzhang</a>',
     'github         <a href="' + github + '" target="_blank">github/ashleyzhang' + "</a>",
+    "<br>"
+  ];
+
+  export const projects = [
+    "<br>",
+    'Music Playlist Generator               A program that utilises the Spotify API to generate a playlist based on artists the user inputs.',
+    'Password Manager                       A password manager that uses asymmetric encryption developed using Python and a PostgreSQL datbase.',
+    'Interactive Terminal Website           A fun, interactive personal website!',
     "<br>"
   ];

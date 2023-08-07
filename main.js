@@ -45,9 +45,23 @@ function formatOutputText(text) {
     return 'visitor@ashley_zhang:~% ' + text;
 }
 
+function replaceSpacesOutsideTags(input) {
+    const regex = /(<[^>]*>)| /g;
+    let insideTag = false;
+  
+    return input.replace(regex, function (match, tag) {
+      if (tag) {
+        insideTag = !tag.startsWith("</");
+        return match;
+      }
+      return insideTag ? match : '&nbsp;';
+    });
+  }
+
 function showOutput(output) {
     var new_output = output.map(function(line) {
-        return line.replace(/\s/g, '&nbsp;');
+        return replaceSpacesOutsideTags(line);
+        // return line.replace(/\s/g, '&nbsp;');
     });
     output_area_element.innerHTML += new_output.join('<br>');
 }
@@ -76,6 +90,10 @@ function command_controller(command) {
         case "experience":
             submitText();
             showOutput(cmd_outputs.experience);
+            break;
+        case "projects":
+            submitText();
+            showOutput(cmd_outputs.projects);
             break;
         default:
             submitText();
